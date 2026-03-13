@@ -12,7 +12,7 @@ const getDailySpecial = (t) => ({
   price: 36,
   originalPrice: 45,
   description: t('daily.item.desc'),
-  image: '/assets/daily_menu_hero.jpg'
+  image: `${import.meta.env.BASE_URL}assets/daily_menu_hero.jpg`
 });
 
 const DailyMenu = () => {
@@ -37,7 +37,7 @@ const DailyMenu = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/daily_menu_hero.jpg')`,
+        background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${import.meta.env.BASE_URL}assets/daily_menu_hero.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'var(--white)',

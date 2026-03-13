@@ -36,7 +36,7 @@ const Patisserie = () => {
           animate={{ opacity: 1, y: 0 }}
           style={{ textAlign: 'center', marginBottom: '40px' }}
         >
-          <img src="/assets/logo.png" alt="Royal Fork Logo" style={{ width: '80px', marginBottom: '20px' }} />
+          <img src={`${import.meta.env.BASE_URL}assets/logo.png`} alt="Royal Fork Logo" style={{ width: '80px', marginBottom: '20px' }} />
           <h1 className="premium-font" style={{ fontSize: '3rem', color: 'var(--navy)', marginBottom: '10px' }}>
             {t('patisserie.title')}
           </h1>

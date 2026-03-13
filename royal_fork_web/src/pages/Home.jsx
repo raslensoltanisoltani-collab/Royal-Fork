@@ -34,7 +34,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero" style={{
         height: '80vh',
-        background: 'linear-gradient(rgba(0,31,63,0.5), rgba(0,31,63,0.5)), url("/assets/hero_main.jpg")', // Official hero asset
+        background: `linear-gradient(rgba(0,31,63,0.5), rgba(0,31,63,0.5)), url("${import.meta.env.BASE_URL}assets/hero_main.jpg")`, // Official hero asset
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex',
@@ -185,7 +185,7 @@ const Home = () => {
             </div>
             <div style={{ position: 'relative' }}>
               <Card3D intensity={10} style={{ borderRadius: '12px', overflow: 'hidden', position: 'relative' }}>
-                <img src="/assets/kitchen.jpg" alt="Cuisine Royal Fork" style={{ width: '100%', display: 'block' }} />
+                <img src={`${import.meta.env.BASE_URL}assets/kitchen.jpg`} alt="Cuisine Royal Fork" style={{ width: '100%', display: 'block' }} />
                 <SteamOverlay count={10} height="100px" opacity={0.7} />
               </Card3D>
               <div style={{ position: 'absolute', bottom: '-20px', right: '-20px', backgroundColor: 'var(--gold)', color: 'var(--navy)', padding: '20px', borderRadius: '8px', fontWeight: 'bold', zIndex: 10 }}>
@@ -251,14 +251,14 @@ const Home = () => {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
             <Card3D intensity={15} style={{ borderRadius: '12px', overflow: 'hidden' }}>
               <img 
-                src="/assets/delivery_van.jpg" 
+                src={`${import.meta.env.BASE_URL}assets/delivery_van.jpg`} 
                 alt="Royal Fork Delivery Van" 
                 style={{ width: '100%', display: 'block' }} 
               />
             </Card3D>
             <Card3D intensity={15} style={{ borderRadius: '12px', overflow: 'hidden', marginTop: '40px' }}>
               <img 
-                src="/assets/delivery_scooter.jpg" 
+                src={`${import.meta.env.BASE_URL}assets/delivery_scooter.jpg`} 
                 alt="Royal Fork Delivery Scooter" 
                 style={{ width: '100%', display: 'block' }} 
               />

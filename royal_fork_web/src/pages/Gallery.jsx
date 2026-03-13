@@ -5,14 +5,15 @@ import Card3D from '../components/Card3D'
 import ImageModal from '../components/ImageModal'
 const Gallery = () => {
   const { t } = useTranslation()
+  const BASE = import.meta.env.BASE_URL
   const images = [
-    { id: 1, title: t('gallery.img1'), type: 'Events', category: t('gallery.cat1'),     src: '/assets/event_buffet.jpg' },
-    { id: 2, title: t('gallery.img2'), type: 'Delivery', category: t('gallery.cat2'),   src: '/assets/delivery_scooter.jpg' },
-    { id: 3, title: t('gallery.img3'), type: 'Corporate', category: t('gallery.cat3'), src: '/assets/corporate_coffee.jpg' },
-    { id: 4, title: t('gallery.img4'), type: 'Kitchen', category: t('gallery.cat4'),    src: '/assets/kitchen.jpg' },
-    { id: 5, title: t('gallery.img5'), type: 'Fleet', category: t('gallery.cat5'),     src: '/assets/delivery_van.jpg' },
-    { id: 6, title: t('gallery.img6'), type: 'Packaging', category: t('gallery.cat6'),  src: '/assets/packaging.jpg' },
-    { id: 7, title: t('gallery.img7'), type: 'Desserts', category: t('gallery.cat7'),   src: '/assets/desserts_spread.jpg' },
+    { id: 1, title: t('gallery.img1'), type: 'Events', category: t('gallery.cat1'),     src: `${BASE}assets/event_buffet.jpg` },
+    { id: 2, title: t('gallery.img2'), type: 'Delivery', category: t('gallery.cat2'),   src: `${BASE}assets/delivery_scooter.jpg` },
+    { id: 3, title: t('gallery.img3'), type: 'Corporate', category: t('gallery.cat3'), src: `${BASE}assets/corporate_coffee.jpg` },
+    { id: 4, title: t('gallery.img4'), type: 'Kitchen', category: t('gallery.cat4'),    src: `${BASE}assets/kitchen.jpg` },
+    { id: 5, title: t('gallery.img5'), type: 'Fleet', category: t('gallery.cat5'),     src: `${BASE}assets/delivery_van.jpg` },
+    { id: 6, title: t('gallery.img6'), type: 'Packaging', category: t('gallery.cat6'),  src: `${BASE}assets/packaging.jpg` },
+    { id: 7, title: t('gallery.img7'), type: 'Desserts', category: t('gallery.cat7'),   src: `${BASE}assets/desserts_spread.jpg` },
   ]
 
   const [zoomedImage, setZoomedImage] = useState(null)

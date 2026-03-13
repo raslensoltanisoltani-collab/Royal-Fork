@@ -28,7 +28,7 @@ const Header = () => {
         <Link to="/" style={{ textDecoration: 'none' }}>
           <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <img 
-              src="/assets/logo.png" 
+              src={`${import.meta.env.BASE_URL}assets/logo.png`} 
               alt="Royal Fork Logo" 
               style={{ height: '60px', width: 'auto' }} 
             />

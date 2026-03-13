@@ -6,24 +6,26 @@ import Card3D from '../components/Card3D'
 import SteamOverlay from '../components/SteamOverlay'
 import ImageModal from '../components/ImageModal'
 
+const BASE = import.meta.env.BASE_URL
+
 const menuData = [
   { id: 1, category: 'Starters', name: 'Mélange de Mezzés Libanais', price: 18, description: 'Hummus, moutabal, taboulé libanais et falafels croustillants.' },
   { id: 8, category: 'Starters', name: 'Falafel de Luxe', price: 14, description: 'Boulettes de pois chiches aux herbes fraîches, sauce tahini premium.' },
-  { id: 13, category: 'Starters', name: 'Salade Mechouia', price: 16, description: 'Salade tunisienne de poivrons et tomates grillés, thon et œuf bio.', image: '/assets/salade_mechouia.jpg' },
-  { id: 18, category: 'Starters', name: 'Salade Méditerranéenne à l\'Escalope', price: 19, description: 'Salade fraîche (laitue, tomate, carotte, maïs, olives) accompagnée d\'une escalope panée croustillante et d\'un filet d\'huile d\'olive.', image: '/assets/salade_mediterraneenne.jpg' },
-  { id: 15, category: 'Starters', name: 'Tajine Tunisien', price: 18, description: 'Délicieux tajine tunisien façon quiche, aux œufs, fromage, persil et poulet.', image: '/assets/tajine_tunisien.jpg' },
-  { id: 2, category: 'Main dishes', name: 'Filet de Bœuf Rossini & Riz Gourmet', price: 45, description: 'Filet de bœuf, foie gras poêlé, sauce Madère, servi avec son riz pilaf savoureux.', image: '/assets/filet_boeuf.jpg' },
-  { id: 9, category: 'Starters', name: 'Couscous Royal', price: 34, description: 'Semoule fine, sept légumes, agneau, poulet et merguez artisanale.', image: '/assets/couscous_royal.jpg' },
-  { id: 10, category: 'Main dishes', name: 'Mansaf Traditionnel', price: 42, description: 'Plat national jordanien : agneau mijoté dans une sauce au yaourt séché (jameed)', image: '/assets/mansaf.jpg' },
-  { id: 11, category: 'Main dishes', name: 'Mloukhia Tunisienne', price: 32, description: 'Ragoût traditionnel de feuilles de corète et bœuf fondant.', image: '/assets/mloukhia.jpg' },
-  { id: 14, category: 'Main dishes', name: 'Spaghetti Fruits de Mer', price: 28, description: 'Spaghetti savoureux aux crevettes, moules et palourdes, sauce tomate épicée.', image: '/assets/spaghetti_fruits_de_mer.jpg' },
-  { id: 16, category: 'Main dishes', name: 'Spaghetti au Poulet', price: 22, description: 'Spaghetti gourmands au poulet rôti, pois chiches et olives de table.', image: '/assets/spaghetti_poulet.jpg' },
+  { id: 13, category: 'Starters', name: 'Salade Mechouia', price: 16, description: 'Salade tunisienne de poivrons et tomates grillés, thon et œuf bio.', image: `${BASE}assets/salade_mechouia.jpg` },
+  { id: 18, category: 'Starters', name: 'Salade Méditerranéenne à l\'Escalope', price: 19, description: 'Salade fraîche (laitue, tomate, carotte, maïs, olives) accompagnée d\'une escalope panée croustillante et d\'un filet d\'huile d\'olive.', image: `${BASE}assets/salade_mediterraneenne.jpg` },
+  { id: 15, category: 'Starters', name: 'Tajine Tunisien', price: 18, description: 'Délicieux tajine tunisien façon quiche, aux œufs, fromage, persil et poulet.', image: `${BASE}assets/tajine_tunisien.jpg` },
+  { id: 2, category: 'Main dishes', name: 'Filet de Bœuf Rossini & Riz Gourmet', price: 45, description: 'Filet de bœuf, foie gras poêlé, sauce Madère, servi avec son riz pilaf savoureux.', image: `${BASE}assets/filet_boeuf.jpg` },
+  { id: 9, category: 'Starters', name: 'Couscous Royal', price: 34, description: 'Semoule fine, sept légumes, agneau, poulet et merguez artisanale.', image: `${BASE}assets/couscous_royal.jpg` },
+  { id: 10, category: 'Main dishes', name: 'Mansaf Traditionnel', price: 42, description: 'Plat national jordanien : agneau mijoté dans une sauce au yaourt séché (jameed)', image: `${BASE}assets/mansaf.jpg` },
+  { id: 11, category: 'Main dishes', name: 'Mloukhia Tunisienne', price: 32, description: 'Ragoût traditionnel de feuilles de corète et bœuf fondant.', image: `${BASE}assets/mloukhia.jpg` },
+  { id: 14, category: 'Main dishes', name: 'Spaghetti Fruits de Mer', price: 28, description: 'Spaghetti savoureux aux crevettes, moules et palourdes, sauce tomate épicée.', image: `${BASE}assets/spaghetti_fruits_de_mer.jpg` },
+  { id: 16, category: 'Main dishes', name: 'Spaghetti au Poulet', price: 22, description: 'Spaghetti gourmands au poulet rôti, pois chiches et olives de table.', image: `${BASE}assets/spaghetti_poulet.jpg` },
   { id: 12, category: 'Main dishes', name: 'Brochettes de Kebab Chef', price: 29, description: 'Viande hachée d\'agneau et bœuf aux épices orientales, grillée au charbon.' },
   { id: 6, category: 'Main dishes', name: 'Tajine d\'Agneau Royal', price: 38, description: 'Mijoté d\'agneau aux pruneaux, amandes grillées et miel.' },
   { id: 3, category: 'Sandwiches', name: 'Club Sandwich Safran', price: 20, description: 'Poulet au safran, légumes grillés, sauce légère au yaourt.' },
   { id: 4, category: 'Desserts', name: 'Dôme Chocolat & Cardamome', price: 14, description: 'Mousse chocolat noir, infusion cardamome, feuille d\'or.' },
 
-  { id: 17, category: 'Drinks', name: 'Citronnade Fraîche (1L)', price: 12, description: 'Citronnade maison aux citrons frais, servie en bouteille de 1 litre avec notre étiquette signature.', image: '/assets/citronnade.jpg' },
+  { id: 17, category: 'Drinks', name: 'Citronnade Fraîche (1L)', price: 12, description: 'Citronnade maison aux citrons frais, servie en bouteille de 1 litre avec notre étiquette signature.', image: `${BASE}assets/citronnade.jpg` },
 ]
 
 const Menu = () => {
