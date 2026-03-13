@@ -54,7 +54,7 @@ function App() {
     <PayPalScriptProvider options={{ "client-id": "test", currency: "EUR" }}>
       <CartProvider>
         <Elements stripe={stripePromise}>
-          <Router>
+          <Router basename={import.meta.env.BASE_URL}>
           <div className="App">
           <Header />
           <main>
