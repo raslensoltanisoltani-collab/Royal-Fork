@@ -219,7 +219,22 @@ export const resources = {
       "transfer.reference": "Référence",
       "transfer.amount": "Montant",
       "transfer.warning": "Indiquez impérativement la référence de commande dans le libellé du virement. Le traitement peut prendre 1 à 3 jours ouvrés.",
-      "transfer.confirm_btn": "Confirmer la commande"
+      "transfer.confirm_btn": "Confirmer la commande",
+      "bot.welcome": "Bonjour ! Je suis l'assistant Royal Fork. Comment puis-je vous aider aujourd'hui ?",
+      "bot.title": "Assistant Royal Bot",
+      "bot.online": "En ligne • Réponses rapides",
+      "bot.placeholder": "Écrivez votre message...",
+      "bot.res_greeting": "Bonjour ! Bienvenue chez Royal Fork. Comment puis-je vous aider aujourd'hui ?",
+      "bot.res_welcome": "Merci ! Nous sommes ravis de vous accueillir chez Royal Fork, l'excellence de la fusion culinaire.",
+      "bot.res_menu": "Vous pouvez consulter notre menu complet dans la section 'Menu'. Nous proposons une fusion cuisine Orientale & Occidentale !",
+      "bot.res_order": "Pour commander, ajoutez des articles à votre panier depuis le Menu, puis allez dans votre panier pour finaliser le paiement.",
+      "bot.res_delivery": "Nous livrons en France, Suisse, Belgique, Pays-Bas, Allemagne et Italie avec notre propre flotte de véhicules.",
+      "bot.res_founders": "Royal Fork a été fondé par la famille Najjar. Les propriétaires sont Mr Kamel et son épouse Madame Aida.",
+      "bot.res_staff": "Notre équipe de cuisine est composée de 12 professionnels passionnés, dont 3 chefs experts qui supervisent la préparation de chaque plat.",
+      "bot.res_halal": "Oui, absolument ! Tous nos produits sont certifiés 100% Halal. Nous attachons une grande importance à la qualité et au respect des normes rituelles.",
+      "bot.res_contact": "Vous pouvez nous contacter au +33 7 76 48 26 09 ou par email à contact@royalfork.fr.",
+      "bot.res_admin": "L'accès administrateur se trouve en bas de page. Vous aurez besoin de vos identifiants pour vous connecter.",
+      "bot.res_fallback": "Je ne suis pas sûr de comprendre, mais je peux vous renseigner sur notre menu, nos zones de livraison ou comment passer une commande !"
     }
   },
   "en": {
@@ -442,7 +457,22 @@ export const resources = {
       "transfer.reference": "Reference",
       "transfer.amount": "Amount",
       "transfer.warning": "You must include the order reference in the transfer description. Processing may take 1 to 3 business days.",
-      "transfer.confirm_btn": "Confirm Order"
+      "transfer.confirm_btn": "Confirm Order",
+      "bot.welcome": "Hello! I am the Royal Fork assistant. How can I help you today?",
+      "bot.title": "Royal Bot Assistant",
+      "bot.online": "Online • Quick responses",
+      "bot.placeholder": "Type your message...",
+      "bot.res_greeting": "Hello! Welcome to Royal Fork. How can I assist you today?",
+      "bot.res_welcome": "Thank you! We are delighted to welcome you to Royal Fork, the excellence of culinary fusion.",
+      "bot.res_menu": "You can view our full menu in the 'Menu' section. We offer a fusion of Oriental & Western cuisine!",
+      "bot.res_order": "To order, add items to your cart from the Menu, then go to your cart to finalize payment.",
+      "bot.res_delivery": "We deliver to France, Switzerland, Belgium, Netherlands, Germany, and Italy with our own fleet of vehicles.",
+      "bot.res_founders": "Royal Fork was founded by the Najjar family. The owners are Mr. Kamel and his wife Madam Aida.",
+      "bot.res_staff": "Our kitchen team consists of 12 passionate professionals, including 3 expert chefs who supervise the preparation of each dish.",
+      "bot.res_halal": "Yes, absolutely! All our products are 100% Halal certified. We attach great importance to quality and ritual standards.",
+      "bot.res_contact": "You can contact us at +33 7 76 48 26 09 or by email at contact@royalfork.fr.",
+      "bot.res_admin": "Admin access is at the bottom of the page. You will need your credentials to log in.",
+      "bot.res_fallback": "I'm not sure I understand, but I can help you with our menu, delivery areas, or how to place an order!"
     }
   },
   "ar": {
@@ -665,7 +695,22 @@ export const resources = {
       "transfer.reference": "المرجع",
       "transfer.amount": "المبلغ",
       "transfer.warning": "يجب ذكر مرجع الطلب في وصف التحويل. قد تستغرق المعالجة من 1 إلى 3 أيام عمل.",
-      "transfer.confirm_btn": "تأكيد الطلب"
+      "transfer.confirm_btn": "تأكيد الطلب",
+      "bot.welcome": "مرحبًا! أنا مساعد رويال فورك. كيف يمكنني مساعدتك اليوم؟",
+      "bot.title": "مساعد رويال بوت",
+      "bot.online": "متصل • ردود سريعة",
+      "bot.placeholder": "اكتب رسالتك...",
+      "bot.res_greeting": "مرحبًا! أهلاً بك في رويال فورك. كيف يمكنني مساعدتك اليوم؟",
+      "bot.res_welcome": "شكرًا لك! يسعدنا الترحيب بك في رويال فورك، تميز الاندماج الطهي.",
+      "bot.res_menu": "يمكنك الاطلاع على قائمتنا الكاملة في قسم 'المنيو'. نحن نقدم مزيجاً من المطبخ الشرقي والغربي!",
+      "bot.res_order": "للطلب، أضف الأصناف إلى سلتك من المنيو، ثم اذهب إلى السلة لإتمام الدفع.",
+      "bot.res_delivery": "نقوم بالتوصيل إلى فرنسا، سويسرا، بلجيكا، هولندا، ألمانيا، وإيطاليا بأسطولنا الخاص من المركبات.",
+      "bot.res_founders": "تأسست رويال فورك من قبل عائلة نجار. المالكون هم السيد كامل وزوجته السيدة عايدة.",
+      "bot.res_staff": "يتكون فريق المطبخ لدينا من 12 محترفًا شغوفًا، بما في ذلك 3 طهاة خبراء يشرفون على تحضير كل طبق.",
+      "bot.res_halal": "نعم، بالتأكيد! جميع منتجاتنا معتمدة حلال 100%. نولي أهمية كبيرة للجودة والمعايير الشرعية.",
+      "bot.res_contact": "يمكنك الاتصال بنا على 09 26 48 76 7 33+ أو عبر البريد الإلكتروني contact@royalfork.fr.",
+      "bot.res_admin": "دخول الإدارة موجود في أسفل الصفحة. ستحتاج إلى بيانات الاعتماد الخاصة بك لتسجيل الدخول.",
+      "bot.res_fallback": "لست متأكداً مما تعنيه، ولكن يمكنني مساعدتك بخصوص المنيو، مناطق التوصيل، أو كيفية الطلب!"
     }
   },
   "de": {
@@ -888,7 +933,22 @@ export const resources = {
       "transfer.reference": "Referenz",
       "transfer.amount": "Betrag",
       "transfer.warning": "Bitte geben Sie unbedingt die Bestellreferenz im Verwendungszweck an. Die Bearbeitung kann 1 bis 3 Werktage dauern.",
-      "transfer.confirm_btn": "Bestellung bestätigen"
+      "transfer.confirm_btn": "Bestellung bestätigen",
+      "bot.welcome": "Hallo! Ich bin der Royal Fork Assistent. Wie kann ich Ihnen heute helfen?",
+      "bot.title": "Royal Bot Assistent",
+      "bot.online": "Online • Schnelle Antworten",
+      "bot.placeholder": "Schreiben Sie Ihre Nachricht...",
+      "bot.res_greeting": "Hallo! Willkommen bei Royal Fork. Wie kann ich Ihnen heute behilflich sein?",
+      "bot.res_welcome": "Vielen Dank! Wir freuen uns, Sie bei Royal Fork begrüßen zu dürfen, der Exzellenz der kulinarischen Fusion.",
+      "bot.res_menu": "Unser komplettes Menü finden Sie im Bereich 'Menü'. Wir bieten eine Fusion aus orientalischer und westlicher Küche!",
+      "bot.res_order": "Um zu bestellen, legen Sie Artikel aus dem Menü in Ihren Warenkorb und gehen dann zum Warenkorb, um die Zahlung abzuschließen.",
+      "bot.res_delivery": "Wir liefern nach Frankreich, in die Schweiz, nach Belgien, in die Niederlande, nach Deutschland und Italien mit unserer eigenen Fahrzeugflotte.",
+      "bot.res_founders": "Royal Fork wurde von der Familie Najjar gegründet. Die Eigentümer sind Herr Kamel und seine Frau Frau Aida.",
+      "bot.res_staff": "Unser Küchenteam besteht aus 12 leidenschaftlichen Fachkräften, darunter 3 Meisterköche, die die Zubereitung jedes Gerichts überwachen.",
+      "bot.res_halal": "Ja, absolut! Alle unsere Produkte sind 100% Halal-zertifiziert. Wir legen großen Wert auf Qualität und rituelle Standards.",
+      "bot.res_contact": "Sie erreichen uns unter +33 7 76 48 26 09 oder per E-Mail unter contact@royalfork.fr.",
+      "bot.res_admin": "Der Admin-Zugang befindet sich am Ende der Seite. Sie benötigen Ihre Zugangsdaten, um sich anzumelden.",
+      "bot.res_fallback": "Ich bin mir nicht sicher, ob ich das verstehe, aber ich kann Ihnen bei unserem Menü, den Liefergebieten oder der Bestellung helfen!"
     }
   },
   "it": {
@@ -1111,7 +1171,22 @@ export const resources = {
       "transfer.reference": "Riferimento",
       "transfer.amount": "Importo",
       "transfer.warning": "Includi obbligatoriamente il riferimento dell'ordine nella causale del bonifico. L'elaborazione può richiedere da 1 a 3 giorni lavorativi.",
-      "transfer.confirm_btn": "Conferma Ordine"
+      "transfer.confirm_btn": "Conferma Ordine",
+      "bot.welcome": "Ciao! Sono l'assistente di Royal Fork. Come posso aiutarti oggi?",
+      "bot.title": "Assistente Royal Bot",
+      "bot.online": "Online • Risposte rapide",
+      "bot.placeholder": "Scrivi il tuo messaggio...",
+      "bot.res_greeting": "Ciao! Benvenuto a Royal Fork. Come posso assisterti oggi?",
+      "bot.res_welcome": "Grazie! Siamo lieti di darti il benvenuto a Royal Fork, l'eccellenza della fusione culinaria.",
+      "bot.res_menu": "Puoi consultare il nostro menu completo nella sezione 'Menu'. Offriamo una fusione di cucina orientale e occidentale!",
+      "bot.res_order": "Per ordinare, aggiungi gli articoli al carrello dal Menu, quindi vai al carrello per completare il pagamento.",
+      "bot.res_delivery": "Consegniamo in Francia, Svizzera, Belgio, Paesi Bassi, Germania e Italia con la nostra flotta di veicoli.",
+      "bot.res_founders": "Royal Fork è stata fondata dalla famiglia Najjar. I proprietari sono il signor Kamel e sua moglie la signora Aida.",
+      "bot.res_staff": "Il nostro team di cucina è composto da 12 professionisti appassionati, tra cui 3 chef esperti che supervisionano la preparazione di ogni piatto.",
+      "bot.res_halal": "Sì, assolutamente! Tutti i nostri prodotti sono certificati 100% Halal. Attribuiamo grande importanza alla qualità e agli standard rituall.",
+      "bot.res_contact": "Puoi contattarci al numero +33 7 76 48 26 09 o via email all'indirizzo contact@royalfork.fr.",
+      "bot.res_admin": "L'accesso admin è in fondo alla pagina. Avrai bisogno delle tue credenziali per accedere.",
+      "bot.res_fallback": "Non sono sicuro di aver capito, ma posso aiutarti con il nostro menu, le zone di consegna o come effettuare un ordine!"
     }
   },
   "nl": {
@@ -1334,7 +1409,22 @@ export const resources = {
       "transfer.reference": "Referentie",
       "transfer.amount": "Bedrag",
       "transfer.warning": "Vermeld verplicht de bestellingsreferentie in de mededeling. Verwerking kan 1 tot 3 werkdagen duren.",
-      "transfer.confirm_btn": "Bestelling bevestigen"
+      "transfer.confirm_btn": "Bestelling bevestigen",
+      "bot.welcome": "Hallo! Ik ben de Royal Fork assistent. Hoe kan ik u vandaag helpen?",
+      "bot.title": "Royal Bot Assistent",
+      "bot.online": "Online • Snelle antwoorden",
+      "bot.placeholder": "Typ uw bericht...",
+      "bot.res_greeting": "Hallo! Welkom bij Royal Fork. Hoe kan ik u vandaag helpen?",
+      "bot.res_welcome": "Bedankt! We zijn verheugd u te verwelkomen bij Royal Fork, de uitmuntendheid van culinaire fusie.",
+      "bot.res_menu": "U kunt ons volledige menu bekijken in de sectie 'Menu'. Wij bieden een fusie van oosterse en westerse keuken!",
+      "bot.res_order": "Om te bestellen, voegt u artikelen toe aan uw winkelwagen vanuit het Menu en gaat u vervolgens naar uw winkelwagen om de betaling af te ronden.",
+      "bot.res_delivery": "Wij leveren in Frankrijk, Zwitserland, België, Nederland, Duitsland en Italië met ons eigen wagenpark.",
+      "bot.res_founders": "Royal Fork is opgericht door de familie Najjar. De eigenaren zijn de heer Kamel en zijn vrouw mevrouw Aida.",
+      "bot.res_staff": "Ons keukenteam bestaat aus 12 gepassioneerde professionals, waaronder 3 chef-koks die toezicht houden op de bereiding van elk gerecht.",
+      "bot.res_halal": "Ja, absoluut! Al onze producten zijn 100% Halal gecertificeerd. Wij hechten veel waarde aan kwaliteit en rituele normen.",
+      "bot.res_contact": "U kunt contact met ons opnemen via +33 7 76 48 26 09 of per e-mail via contact@royalfork.fr.",
+      "bot.res_admin": "Admin toegang bevindt zich onderaan de pagina. U heeft uw inloggegevens nodig om in te loggen.",
+      "bot.res_fallback": "Ik weet niet zeker of ik het begrijp, maar ik kan u helpen met ons menu, bezorggebieden of hoe u een bestelling plaatst!"
     }
   }
 };

@@ -1,14 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
 
 const ChatBot = () => {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([
-    { id: 1, text: "Bonjour ! Je suis l'assistant Royal Fork. Comment puis-je vous aider aujourd'hui ?", sender: 'bot' }
-  ]);
+  const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
+
+  // Initialize/Reset welcome message when language changes
+  useEffect(() => {
+    setMessages([
+      { id: 1, text: t('bot.welcome'), sender: 'bot' }
+    ]);
+  }, [i18n.language, t]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -18,7 +25,7 @@ const ChatBot = () => {
     scrollToBottom();
   }, [messages]);
 
-let nextMsgId = 100;
+  let nextMsgId = 100;
 
   const handleSend = () => {
     if (!input.trim()) return;
@@ -37,37 +44,38 @@ let nextMsgId = 100;
   };
 
   const getBotResponse = (query) => {
-    if (query.includes('bonjour') || query.includes('salut') || query.includes('hello') || query.includes('bojour')) {
-      return "Bonjour ! Bienvenue chez Royal Fork. Comment puis-je vous aider aujourd'hui ?";
+    // Basic keyword detection across multiple languages
+    if (query.includes('bonjour') || query.includes('salut') || query.includes('hello') || query.includes('hi') || query.includes('bojour') || query.includes('مرحبا')) {
+      return t('bot.res_greeting');
     }
-    if (query.includes('bienvenue') || query.includes('bieve') || query.includes('bienvenuu') || query.includes('bienvenu')) {
-      return "Merci ! Nous sommes ravis de vous accueillir chez Royal Fork, l'excellence de la fusion culinaire.";
+    if (query.includes('bienvenue') || query.includes('welcome') || query.includes('bieve') || query.includes('bienvenuu') || query.includes('bienvenu') || query.includes('أهلا')) {
+      return t('bot.res_welcome');
     }
-    if (query.includes('fondateur') || query.includes('proprietaire') || query.includes('qui est le patron') || query.includes('najjar') || query.includes('kamel') || query.includes('aida')) {
-      return "Royal Fork a été fondé par la famille Najjar. Les propriétaires sont Mr Kamel et son épouse Madame Aida.";
+    if (query.includes('fondateur') || query.includes('proprietaire') || query.includes('najjar') || query.includes('kamel') || query.includes('aida') || query.includes('owner') || query.includes('founder') || query.includes('الأصحاب')) {
+      return t('bot.res_founders');
     }
-    if (query.includes('halal') || query.includes('hallal') || query.includes('certification')) {
-      return "Oui, absolument ! Tous nos produits sont certifiés 100% Halal. Nous attachons une grande importance à la qualité et au respect des normes rituelles.";
+    if (query.includes('halal') || query.includes('hallal') || query.includes('certification') || query.includes('حلال')) {
+      return t('bot.res_halal');
     }
-    if (query.includes('personnel') || query.includes('equipe') || query.includes('cuisine') || query.includes('chef')) {
-      return "Notre équipe de cuisine est composée de 12 professionnels passionnés, dont 3 chefs experts qui supervisent la préparation de chaque plat pour garantir une qualité royale.";
+    if (query.includes('personnel') || query.includes('equipe') || query.includes('cuisine') || query.includes('chef') || query.includes('staff') || query.includes('team') || query.includes('الموظفين')) {
+      return t('bot.res_staff');
     }
-    if (query.includes('menu') || query.includes('carte') || query.includes('manger')) {
-      return "Vous pouvez consulter notre menu complet dans la section 'Menu'. Nous proposons une fusion cuisine Orientale & Occidentale !";
+    if (query.includes('menu') || query.includes('carte') || query.includes('manger') || query.includes('food') || query.includes('eat') || query.includes('قائمة')) {
+      return t('bot.res_menu');
     }
-    if (query.includes('commande') || query.includes('commander')) {
-      return "Pour commander, ajoutez des articles à votre panier depuis le Menu, puis allez dans votre panier pour finaliser le paiement.";
+    if (query.includes('commande') || query.includes('commander') || query.includes('order') || query.includes('طلب')) {
+      return t('bot.res_order');
     }
-    if (query.includes('livraison') || query.includes('pays') || query.includes('ou librez-vous')) {
-      return "Nous livrons en France, Suisse, Belgique, Pays-Bas, Allemagne et Italie avec notre propre flotte de véhicules.";
+    if (query.includes('livraison') || query.includes('pays') || query.includes('delivery') || query.includes('shipping') || query.includes('توصيل')) {
+      return t('bot.res_delivery');
     }
-    if (query.includes('admin') || query.includes('connexion')) {
-      return "L'accès administrateur se trouve en bas de page. Vous aurez besoin de vos identifiants pour vous connecter.";
+    if (query.includes('admin') || query.includes('connexion') || query.includes('login') || query.includes('مسؤول')) {
+      return t('bot.res_admin');
     }
-    if (query.includes('contact') || query.includes('appel') || query.includes('telephone')) {
-      return "Vous pouvez nous contacter au 07764826093 ou par email à contact@royalfork.fr.";
+    if (query.includes('contact') || query.includes('appel') || query.includes('telephone') || query.includes('phone') || query.includes('email') || query.includes('اتصال')) {
+      return t('bot.res_contact');
     }
-    return "Je ne suis pas sûr de comprendre, mais je peux vous renseigner sur notre menu, nos zones de livraison ou comment passer une commande !";
+    return t('bot.res_fallback');
   };
 
   return (
@@ -94,23 +102,24 @@ let nextMsgId = 100;
           alignItems: 'center',
           justifyContent: 'center'
         }}
+        aria-label="Chat with Royal Bot"
       >
         {isOpen ? <X size={30} /> : <MessageCircle size={30} />}
       </motion.button>
 
       {/* Chat Window */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            initial={{ opacity: 0, y: 50, scale: 0.8, originY: 1, originX: 1 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.8 }}
             style={{
               position: 'fixed',
               bottom: '100px',
               right: '30px',
-              width: '350px',
-              height: '500px',
+              width: 'min(350px, 90vw)',
+              height: 'min(500px, 70vh)',
               backgroundColor: 'white',
               borderRadius: '15px',
               boxShadow: '0 10px 40px rgba(0,0,0,0.15)',
@@ -122,11 +131,15 @@ let nextMsgId = 100;
           >
             {/* Header */}
             <div style={{ backgroundColor: 'var(--navy)', color: 'white', padding: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <Bot size={24} color="var(--gold)" />
-              <div>
-                <div style={{ fontWeight: 'bold' }}>Assistant Royal Bot</div>
-                <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>En ligne • Réponses rapides</div>
+              <div style={{ position: 'relative' }}>
+                <Bot size={24} color="var(--gold)" />
+                <div style={{ position: 'absolute', bottom: '-2px', right: '-2px', width: '8px', height: '8px', backgroundColor: '#22c55e', borderRadius: '50%', border: '2px solid var(--navy)' }} />
               </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontWeight: 'bold', fontSize: '1rem' }}>{t('bot.title')}</div>
+                <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>{t('bot.online')}</div>
+              </div>
+              <X size={20} style={{ cursor: 'pointer', opacity: 0.6 }} onClick={() => setIsOpen(false)} />
             </div>
 
             {/* Messages Area */}
@@ -134,24 +147,28 @@ let nextMsgId = 100;
               {messages.map((msg) => (
                 <div key={msg.id} style={{
                   alignSelf: msg.sender === 'bot' ? 'flex-start' : 'flex-end',
-                  maxWidth: '80%',
+                  maxWidth: '85%',
                   display: 'flex',
-                  gap: '8px',
+                  gap: '10px',
                   flexDirection: msg.sender === 'bot' ? 'row' : 'row-reverse'
                 }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: msg.sender === 'bot' ? 'var(--navy)' : 'var(--gold)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    {msg.sender === 'bot' ? <Bot size={14} color="var(--gold)" /> : <User size={14} color="var(--navy)" />}
-                  </div>
+                  {msg.sender === 'bot' && (
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', backgroundColor: 'rgba(0,31,63,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <Bot size={16} color="var(--navy)" />
+                    </div>
+                  )}
                   <div style={{
                     backgroundColor: msg.sender === 'bot' ? 'white' : 'var(--navy)',
                     color: msg.sender === 'bot' ? 'var(--navy)' : 'white',
-                    padding: '10px 15px',
-                    borderRadius: '12px',
-                    borderTopLeftRadius: msg.sender === 'bot' ? '2px' : '12px',
-                    borderTopRightRadius: msg.sender === 'user' ? '2px' : '12px',
-                    fontSize: '0.9rem',
-                    boxShadow: '0 2px 5px rgba(0,0,0,0.05)',
-                    lineHeight: '1.4'
+                    padding: '12px 16px',
+                    borderRadius: '18px',
+                    borderTopLeftRadius: msg.sender === 'bot' ? '2px' : '18px',
+                    borderTopRightRadius: msg.sender === 'user' ? '2px' : '18px',
+                    fontSize: '0.92rem',
+                    boxShadow: msg.sender === 'bot' ? '0 2px 10px rgba(0,0,0,0.05)' : 'none',
+                    lineHeight: '1.5',
+                    textAlign: i18n.language === 'ar' ? 'right' : 'left',
+                    direction: i18n.language === 'ar' ? 'rtl' : 'ltr'
                   }}>
                     {msg.text}
                   </div>
@@ -161,21 +178,34 @@ let nextMsgId = 100;
             </div>
 
             {/* Input Area */}
-            <div style={{ padding: '15px', borderTop: '1px solid #eee', display: 'flex', gap: '10px' }}>
+            <div style={{ padding: '15px', borderTop: '1px solid #f0f0f0', display: 'flex', gap: '10px', backgroundColor: 'white' }}>
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-                placeholder="Écrivez votre message..."
-                style={{ flex: 1, padding: '10px', borderRadius: '20px', border: '1px solid #ddd', outline: 'none', fontSize: '0.9rem' }}
+                placeholder={t('bot.placeholder')}
+                style={{ 
+                  flex: 1, 
+                  padding: '12px 16px', 
+                  borderRadius: '25px', 
+                  border: '1.5px solid #eee', 
+                  outline: 'none', 
+                  fontSize: '0.9rem',
+                  transition: 'border-color 0.2s',
+                  direction: i18n.language === 'ar' ? 'rtl' : 'ltr'
+                }}
+                onFocus={(e) => e.target.style.borderColor = 'var(--gold)'}
+                onBlur={(e) => e.target.style.borderColor = '#eee'}
               />
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={handleSend}
-                style={{ backgroundColor: 'var(--navy)', color: 'white', border: 'none', width: '38px', height: '38px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}
+                style={{ backgroundColor: 'var(--navy)', color: 'white', border: 'none', width: '42px', height: '42px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: '0 2px 10px rgba(0,31,63,0.2)' }}
               >
                 <Send size={18} />
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         )}
