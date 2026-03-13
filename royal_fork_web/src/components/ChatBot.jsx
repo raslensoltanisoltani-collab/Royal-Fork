@@ -51,7 +51,7 @@ const ChatBot = () => {
     if (query.includes('bienvenue') || query.includes('welcome') || query.includes('bieve') || query.includes('bienvenuu') || query.includes('bienvenu') || query.includes('أهلا')) {
       return t('bot.res_welcome');
     }
-    if (query.includes('fondateur') || query.includes('proprietaire') || query.includes('najjar') || query.includes('kamel') || query.includes('aida') || query.includes('owner') || query.includes('founder') || query.includes('الأصحاب')) {
+    if (query.includes('fondateur') || query.includes('proprietaire') || query.includes('najjar') || query.includes('kamel') || query.includes('aida') || query.includes('owner') || query.includes('founder') || query.includes('الأصحاب') || query.includes('المؤسس') || query.includes('مالك') || query.includes('االموسس')) {
       return t('bot.res_founders');
     }
     if (query.includes('halal') || query.includes('hallal') || query.includes('certification') || query.includes('حلال')) {
