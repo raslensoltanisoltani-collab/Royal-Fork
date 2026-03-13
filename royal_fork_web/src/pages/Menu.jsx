@@ -9,7 +9,7 @@ import ImageModal from '../components/ImageModal'
 const BASE = import.meta.env.BASE_URL
 
 const menuData = [
-  { id: 1, category: 'Starters', name: 'Mélange de Mezzés Libanais', price: 18, description: 'Hummus, moutabal, taboulé libanais et falafels croustillants.' },
+  { id: 1, category: 'Starters', name: 'Mélange de Mezzés Libanais', price: 18, description: 'Hummus, moutabal, taboulé libanais et falafels croustillants.', image: `${BASE}assets/mezze_libanais.png` },
   { id: 8, category: 'Starters', name: 'Falafel de Luxe', price: 14, description: 'Boulettes de pois chiches aux herbes fraîches, sauce tahini premium.' },
   { id: 13, category: 'Starters', name: 'Salade Mechouia', price: 16, description: 'Salade tunisienne de poivrons et tomates grillés, thon et œuf bio.', image: `${BASE}assets/salade_mechouia.jpg` },
   { id: 18, category: 'Starters', name: 'Salade Méditerranéenne à l\'Escalope', price: 19, description: 'Salade fraîche (laitue, tomate, carotte, maïs, olives) accompagnée d\'une escalope panée croustillante et d\'un filet d\'huile d\'olive.', image: `${BASE}assets/salade_mediterraneenne.jpg` },
