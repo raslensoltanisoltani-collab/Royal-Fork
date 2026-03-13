@@ -43,6 +43,9 @@ let nextMsgId = 100;
     if (query.includes('bienvenue') || query.includes('bieve') || query.includes('bienvenuu') || query.includes('bienvenu')) {
       return "Merci ! Nous sommes ravis de vous accueillir chez Royal Fork, l'excellence de la fusion culinaire.";
     }
+    if (query.includes('fondateur') || query.includes('proprietaire') || query.includes('qui est le patron') || query.includes('najjar') || query.includes('kamel') || query.includes('aida')) {
+      return "Royal Fork a été fondé par la famille Najjar. Les propriétaires sont Mr Kamel et son épouse Madame Aida.";
+    }
     if (query.includes('menu') || query.includes('carte') || query.includes('manger')) {
       return "Vous pouvez consulter notre menu complet dans la section 'Menu'. Nous proposons une fusion cuisine Orientale & Occidentale !";
     }
