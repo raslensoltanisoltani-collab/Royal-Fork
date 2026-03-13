@@ -365,7 +365,7 @@ const ServiceCard = ({ title, desc }) => (
       textAlign: 'center'
     }}
   >
-    <h3 style={{ marginBottom: '15px', color: 'var(--navy)' }}>{title}</h3>
+    <h3 style={{ marginBottom: '15px', color: 'var(--gold)' }}>{title}</h3>
     <p style={{ color: '#666' }}>{desc}</p>
   </motion.div>
 )
