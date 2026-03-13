@@ -46,6 +46,9 @@ let nextMsgId = 100;
     if (query.includes('fondateur') || query.includes('proprietaire') || query.includes('qui est le patron') || query.includes('najjar') || query.includes('kamel') || query.includes('aida')) {
       return "Royal Fork a été fondé par la famille Najjar. Les propriétaires sont Mr Kamel et son épouse Madame Aida.";
     }
+    if (query.includes('halal') || query.includes('hallal') || query.includes('certification')) {
+      return "Oui, absolument ! Tous nos produits sont certifiés 100% Halal. Nous attachons une grande importance à la qualité et au respect des normes rituelles.";
+    }
     if (query.includes('menu') || query.includes('carte') || query.includes('manger')) {
       return "Vous pouvez consulter notre menu complet dans la section 'Menu'. Nous proposons une fusion cuisine Orientale & Occidentale !";
     }
