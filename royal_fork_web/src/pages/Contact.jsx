@@ -20,7 +20,7 @@ const Contact = () => {
             <ContactInfoItem 
               icon={<Phone color="var(--gold)" />}
               title={t('contact.phone')}
-              text="07764826093"
+              text="+33 7 76 48 26 09"
             />
             <ContactInfoItem 
               icon={<Clock color="var(--gold)" />}
@@ -30,8 +30,8 @@ const Contact = () => {
             <ContactInfoItem 
               icon={<MessageCircle color="#25D366" />}
               title="WhatsApp"
-              text="07764826093"
-              link="https://wa.me/447764826093"
+              text="+33 7 76 48 26 09"
+              link="https://wa.me/337764826093"
             />
             <ContactInfoItem 
               icon={<Mail color="var(--gold)" />}
