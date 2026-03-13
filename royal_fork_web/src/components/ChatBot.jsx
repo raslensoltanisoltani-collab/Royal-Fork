@@ -49,6 +49,9 @@ let nextMsgId = 100;
     if (query.includes('halal') || query.includes('hallal') || query.includes('certification')) {
       return "Oui, absolument ! Tous nos produits sont certifiés 100% Halal. Nous attachons une grande importance à la qualité et au respect des normes rituelles.";
     }
+    if (query.includes('personnel') || query.includes('equipe') || query.includes('cuisine') || query.includes('chef')) {
+      return "Notre équipe de cuisine est composée de 12 professionnels passionnés, dont 3 chefs experts qui supervisent la préparation de chaque plat pour garantir une qualité royale.";
+    }
     if (query.includes('menu') || query.includes('carte') || query.includes('manger')) {
       return "Vous pouvez consulter notre menu complet dans la section 'Menu'. Nous proposons une fusion cuisine Orientale & Occidentale !";
     }
