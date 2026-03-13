@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react'
@@ -21,9 +21,20 @@ const Gallery = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [zoomedImage, setZoomedImage] = useState(null)
+  const [isPaused, setIsPaused] = useState(false)
+  const intervalRef = useRef(null)
 
   const nextImage = () => setCurrentIndex((prev) => (prev + 1) % images.length)
   const prevImage = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
+
+  // Auto-advance every 4 seconds, pause on hover
+  useEffect(() => {
+    if (isPaused) return
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length)
+    }, 4000)
+    return () => clearInterval(intervalRef.current)
+  }, [isPaused, images.length])
 
   const getCardStyle = (index) => {
     const diff = index - currentIndex
@@ -58,14 +69,18 @@ const Gallery = () => {
         </motion.h2>
 
         {/* 3D Carousel Container */}
-        <div style={{ 
-          position: 'relative', 
-          height: '500px', 
-          width: '100%', 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center' 
-        }}>
+        <div 
+          style={{ 
+            position: 'relative', 
+            height: '500px', 
+            width: '100%', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center' 
+          }}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           <AnimatePresence mode="popLayout">
             {images.map((img, index) => {
               const style = getCardStyle(index)
@@ -166,8 +181,8 @@ const Gallery = () => {
           </button>
         </div>
 
-        {/* Carousel Pagination dots */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '30px' }}>
+        {/* Carousel Pagination dots + Play/Pause indicator */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '30px' }}>
           {images.map((_, i) => (
             <div 
               key={i}
@@ -182,6 +197,29 @@ const Gallery = () => {
               }}
             />
           ))}
+          {/* Play/Pause button */}
+          <button
+            onClick={() => setIsPaused(p => !p)}
+            title={isPaused ? 'Reprendre' : 'Pause'}
+            style={{
+              marginLeft: '12px',
+              background: 'none',
+              border: '2px solid var(--gold)',
+              borderRadius: '50%',
+              width: '30px',
+              height: '30px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              color: 'var(--gold)',
+              fontSize: '12px',
+              flexShrink: 0,
+              transition: 'all 0.2s'
+            }}
+          >
+            {isPaused ? '▶' : '⏸'}
+          </button>
         </div>
 
         <ImageModal 
