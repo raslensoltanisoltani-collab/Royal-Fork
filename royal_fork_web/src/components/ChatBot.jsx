@@ -72,6 +72,9 @@ const ChatBot = () => {
     if (query.includes('admin') || query.includes('connexion') || query.includes('login') || query.includes('مسؤول')) {
       return t('bot.res_admin');
     }
+    if (query.includes('objectif') || query.includes('but') || query.includes('avenir') || query.includes('expansion') || query.includes('goal') || query.includes('future') || query.includes('vision') || query.includes('أهداف') || query.includes('مشروع')) {
+      return t('bot.res_goals');
+    }
     if (query.includes('contact') || query.includes('appel') || query.includes('telephone') || query.includes('phone') || query.includes('email') || query.includes('اتصال')) {
       return t('bot.res_contact');
     }

@@ -234,6 +234,7 @@ export const resources = {
       "bot.res_halal": "Oui, absolument ! Tous nos produits sont certifiés 100% Halal. Nous attachons une grande importance à la qualité et au respect des normes rituelles.",
       "bot.res_contact": "Vous pouvez nous contacter au +33 7 76 48 26 09 ou par email à contact@royalfork.fr.",
       "bot.res_admin": "L'accès administrateur se trouve en bas de page. Vous aurez besoin de vos identifiants pour vous connecter.",
+      "bot.res_goals": "Nos objectifs sont clairs : Phase 1 - Expansion dans toutes les villes de France et tous les pays européens. Phase 2 - Expansion en Amérique du Nord et ouverture de succursales dans le monde entier.",
       "bot.res_fallback": "Je ne suis pas sûr de comprendre, mais je peux vous renseigner sur notre menu, nos zones de livraison ou comment passer une commande !"
     }
   },
@@ -472,6 +473,7 @@ export const resources = {
       "bot.res_halal": "Yes, absolutely! All our products are 100% Halal certified. We attach great importance to quality and ritual standards.",
       "bot.res_contact": "You can contact us at +33 7 76 48 26 09 or by email at contact@royalfork.fr.",
       "bot.res_admin": "Admin access is at the bottom of the page. You will need your credentials to log in.",
+      "bot.res_goals": "Our goals are clear: Phase 1 - Expansion into all cities in France and all European countries. Phase 2 - Expansion into North America and opening branches worldwide.",
       "bot.res_fallback": "I'm not sure I understand, but I can help you with our menu, delivery areas, or how to place an order!"
     }
   },
@@ -710,7 +712,8 @@ export const resources = {
       "bot.res_halal": "نعم، بالتأكيد! جميع منتجاتنا معتمدة حلال 100%. نولي أهمية كبيرة للجودة والمعايير الشرعية.",
       "bot.res_contact": "يمكنك الاتصال بنا على 09 26 48 76 7 33+ أو عبر البريد الإلكتروني contact@royalfork.fr.",
       "bot.res_admin": "دخول الإدارة موجود في أسفل الصفحة. ستحتاج إلى بيانات الاعتماد الخاصة بك لتسجيل الدخول.",
-      "bot.res_fallback": "لست متأكداً مما تعنيه، ولكن يمكنني مساعدتك بخصوص المنيو، مناطق التوصيل، أو كيفية الطلب!"
+      "bot.res_goals": "أهداف رويال فورك واضحة: المرحلة الأولى - الانتشار في كل مدن فرنسا وجميع الدول الأوروبية. المرحلة الثانية - الانتشار في أمريكا الشمالية وفتح فروع في مختلف دول العالم.",
+      "bot.res_fallback": "لست متأكداً مما تعنيه, ولكن يمكنني مساعدتك بخصوص المنيو، مناطق التوصيل، أو كيفية الطلب!"
     }
   },
   "de": {
@@ -948,6 +951,7 @@ export const resources = {
       "bot.res_halal": "Ja, absolut! Alle unsere Produkte sind 100% Halal-zertifiziert. Wir legen großen Wert auf Qualität und rituelle Standards.",
       "bot.res_contact": "Sie erreichen uns unter +33 7 76 48 26 09 oder per E-Mail unter contact@royalfork.fr.",
       "bot.res_admin": "Der Admin-Zugang befindet sich am Ende der Seite. Sie benötigen Ihre Zugangsdaten, um sich anzumelden.",
+      "bot.res_goals": "Unsere Ziele sind klar: Phase 1 - Expansion in alle Städte Frankreichs und alle europäischen Länder. Phase 2 - Expansion nach Nordamerika und Eröffnung von Niederlassungen weltweit.",
       "bot.res_fallback": "Ich bin mir nicht sicher, ob ich das verstehe, aber ich kann Ihnen bei unserem Menü, den Liefergebieten oder der Bestellung helfen!"
     }
   },
@@ -1186,6 +1190,7 @@ export const resources = {
       "bot.res_halal": "Sì, assolutamente! Tutti i nostri prodotti sono certificati 100% Halal. Attribuiamo grande importanza alla qualità e agli standard rituall.",
       "bot.res_contact": "Puoi contattarci al numero +33 7 76 48 26 09 o via email all'indirizzo contact@royalfork.fr.",
       "bot.res_admin": "L'accesso admin è in fondo alla pagina. Avrai bisogno delle tue credenziali per accedere.",
+      "bot.res_goals": "I nostri obiettivi sono chiari: Fase 1 - Espansione in tutte le città della Francia e in tutti i paesi europei. Fase 2 - Espansione in Nord America e apertura di filiali in tutto il mondo.",
       "bot.res_fallback": "Non sono sicuro di aver capito, ma posso aiutarti con il nostro menu, le zone di consegna o come effettuare un ordine!"
     }
   },
@@ -1424,6 +1429,7 @@ export const resources = {
       "bot.res_halal": "Ja, absoluut! Al onze producten zijn 100% Halal gecertificeerd. Wij hechten veel waarde aan kwaliteit en rituele normen.",
       "bot.res_contact": "U kunt contact met ons opnemen via +33 7 76 48 26 09 of per e-mail via contact@royalfork.fr.",
       "bot.res_admin": "Admin toegang bevindt zich onderaan de pagina. U heeft uw inloggegevens nodig om in te loggen.",
+      "bot.res_goals": "Onze doelen zijn duidelijk: Fase 1 - Expansie in alle steden van Frankrijk en alle Europese landen. Fase 2 - Expansie in Noord-Amerika en opening van vestigingen wereldwijd.",
       "bot.res_fallback": "Ik weet niet zeker of ik het begrijp, maar ik kan u helpen met ons menu, bezorggebieden of hoe u een bestelling plaatst!"
     }
   }
