@@ -82,7 +82,7 @@ const Contact = () => {
         {/* Google Map */}
         <div style={{ width: '100%', height: '450px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
           <iframe 
-            src="https://maps.google.com/maps?q=68%20Rue%20Rachais,%2069007%20Lyon,%20France&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            src="https://maps.google.com/maps?q=7%20Rue%20des%20Sports,%2069003%20Lyon,%20France&t=&z=15&ie=UTF8&iwloc=&output=embed" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
