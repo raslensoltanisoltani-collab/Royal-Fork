@@ -37,6 +37,12 @@ let nextMsgId = 100;
   };
 
   const getBotResponse = (query) => {
+    if (query.includes('bonjour') || query.includes('salut') || query.includes('hello') || query.includes('bojour')) {
+      return "Bonjour ! Bienvenue chez Royal Fork. Comment puis-je vous aider aujourd'hui ?";
+    }
+    if (query.includes('bienvenue') || query.includes('bieve')) {
+      return "Merci ! Nous sommes ravis de vous accueillir chez Royal Fork, l'excellence de la fusion culinaire.";
+    }
     if (query.includes('menu') || query.includes('carte') || query.includes('manger')) {
       return "Vous pouvez consulter notre menu complet dans la section 'Menu'. Nous proposons une fusion cuisine Orientale & Occidentale !";
     }
