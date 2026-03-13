@@ -23,7 +23,7 @@ const Corporate = () => {
       {/* Main Services Grid */}
       <section className="section-padding">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
             
             {/* Business Catering */}
             <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
@@ -79,7 +79,7 @@ const Corporate = () => {
 
       {/* Visual Break with Images */}
       <section style={{ paddingBottom: '80px' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr 1fr', gap: '20px' }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
           <Card3D intensity={10} style={{ borderRadius: '8px', overflow: 'hidden', height: '350px', position: 'relative' }}>
             <img src={`${import.meta.env.BASE_URL}assets/corporate_coffee.jpg`} alt="Coffee Break" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             <SteamOverlay count={6} height="70px" />

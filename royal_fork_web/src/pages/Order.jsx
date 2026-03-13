@@ -53,7 +53,7 @@ const Order = () => {
   return (
     <div className="order-page section-padding">
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '50px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '50px' }}>
           {/* Order Form */}
           <div>
             <h2 style={{ marginBottom: '30px', color: 'var(--navy)' }}>{t('order.title')}</h2>
@@ -165,7 +165,7 @@ const Order = () => {
                 <h4 style={{ color: 'var(--navy)', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem' }}>
                   💳 {t('order.payment_method')}
                 </h4>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px' }}>
                   {['Card', 'PayPal', 'Cash', 'Transfer'].map((method) => (
                     <label key={method} style={paymentLabelStyle}>
                       <input 

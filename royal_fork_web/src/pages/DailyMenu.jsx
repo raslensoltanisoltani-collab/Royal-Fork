@@ -50,8 +50,8 @@ const DailyMenu = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 style={{ fontSize: '3.5rem', marginBottom: '10px', color: 'var(--gold)' }}>{t('daily.title')}</h1>
-          <p style={{ fontSize: '1.2rem', opacity: 0.9 }}>{t('daily.subtitle')}</p>
+          <h1 style={{ fontSize: 'clamp(2.2rem, 8vw, 3.5rem)', marginBottom: '10px', color: 'var(--gold)' }}>{t('daily.title')}</h1>
+          <p style={{ fontSize: 'clamp(1rem, 4vw, 1.2rem)', opacity: 0.9 }}>{t('daily.subtitle')}</p>
         </motion.div>
       </section>
 

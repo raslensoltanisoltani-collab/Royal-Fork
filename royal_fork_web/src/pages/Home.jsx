@@ -139,10 +139,10 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="container"
         >
-          <h1 style={{ fontSize: '4rem', marginBottom: '1rem', color: 'var(--gold)' }}>
+          <h1 className="premium-font" style={{ fontSize: 'clamp(2.2rem, 8vw, 4rem)', marginBottom: '1rem', color: 'var(--gold)' }}>
             {t('hero_title')}
           </h1>
-          <p style={{ fontSize: '1.5rem', marginBottom: '2rem', maxWidth: '800px', margin: '0 auto 2rem' }}>
+          <p style={{ fontSize: 'clamp(1rem, 4vw, 1.5rem)', marginBottom: '2rem', maxWidth: '800px', margin: '0 auto 2rem' }}>
             {t('hero_subtitle')}
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
@@ -170,7 +170,7 @@ const Home = () => {
       {/* Detailed Presentation Section */}
       <section className="section-padding" style={{ backgroundColor: 'var(--white)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', alignItems: 'center' }}>
             <div>
               <h2 style={{ fontSize: '2.5rem', color: 'var(--navy)', marginBottom: '25px' }}>{t('home.excellence_title')}</h2>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.7', color: '#444', marginBottom: '20px' }}>
@@ -231,7 +231,7 @@ const Home = () => {
       </section>
       {/* Delivery Fleet Section */}
       <section className="section-padding">
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px', alignItems: 'center' }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', alignItems: 'center' }}>
           <div>
             <h2 style={{ fontSize: '2.5rem', color: 'var(--navy)', marginBottom: '20px' }}>{t('home.delivery_title')}</h2>
             <p style={{ fontSize: '1.2rem', marginBottom: '30px', opacity: 0.8 }}>
@@ -248,7 +248,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px' }}>
             <Card3D intensity={15} style={{ borderRadius: '12px', overflow: 'hidden' }}>
               <img 
                 src={`${import.meta.env.BASE_URL}assets/delivery_van.jpg`} 
