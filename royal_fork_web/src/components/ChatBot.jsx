@@ -40,7 +40,7 @@ let nextMsgId = 100;
     if (query.includes('bonjour') || query.includes('salut') || query.includes('hello') || query.includes('bojour')) {
       return "Bonjour ! Bienvenue chez Royal Fork. Comment puis-je vous aider aujourd'hui ?";
     }
-    if (query.includes('bienvenue') || query.includes('bieve')) {
+    if (query.includes('bienvenue') || query.includes('bieve') || query.includes('bienvenuu') || query.includes('bienvenu')) {
       return "Merci ! Nous sommes ravis de vous accueillir chez Royal Fork, l'excellence de la fusion culinaire.";
     }
     if (query.includes('menu') || query.includes('carte') || query.includes('manger')) {
