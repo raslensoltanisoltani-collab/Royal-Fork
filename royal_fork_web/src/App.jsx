@@ -147,7 +147,7 @@ function App() {
                 <p style={{ fontSize: '0.9rem', opacity: 0.8, marginTop: '10px' }}>{t('footer.hq_email')}</p>
                 <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>{t('footer.hq_tel')}</p>
                 <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>
-                  <a href="https://wa.me/447764826093" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', textDecoration: 'none', fontWeight: 'bold' }}>
+                  <a href="https://wa.me/337764826093" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', textDecoration: 'none', fontWeight: 'bold' }}>
                     {t('footer.hq_whatsapp')}
                   </a>
                 </p>
