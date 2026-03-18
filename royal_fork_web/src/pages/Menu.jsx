@@ -20,10 +20,10 @@ const menuData = [
   { id: 11, category: 'Main dishes', name: 'Mloukhia Tunisienne', price: 32, description: 'Ragoût traditionnel de feuilles de corète et bœuf fondant.', image: `${BASE}assets/mloukhia.jpg` },
   { id: 14, category: 'Main dishes', name: 'Spaghetti Fruits de Mer', price: 28, description: 'Spaghetti savoureux aux crevettes, moules et palourdes, sauce tomate épicée.', image: `${BASE}assets/spaghetti_fruits_de_mer.jpg` },
   { id: 16, category: 'Main dishes', name: 'Spaghetti au Poulet', price: 22, description: 'Spaghetti gourmands au poulet rôti, pois chiches et olives de table.', image: `${BASE}assets/spaghetti_poulet.jpg` },
-  { id: 12, category: 'Main dishes', name: 'Brochettes de Kebab Chef', price: 29, description: 'Viande hachée d\'agneau et bœuf aux épices orientales, grillée au charbon.' },
-  { id: 6, category: 'Main dishes', name: 'Tajine d\'Agneau Royal', price: 38, description: 'Mijoté d\'agneau aux pruneaux, amandes grillées et miel.' },
-  { id: 3, category: 'Sandwiches', name: 'Club Sandwich Safran', price: 20, description: 'Poulet au safran, légumes grillés, sauce légère au yaourt.' },
-  { id: 4, category: 'Desserts', name: 'Dôme Chocolat & Cardamome', price: 14, description: 'Mousse chocolat noir, infusion cardamome, feuille d\'or.' },
+  { id: 12, category: 'Main dishes', name: 'Brochettes de Kebab Chef', price: 29, description: 'Viande hachée d\'agneau et bœuf aux épices orientales, grillée au charbon.', image: `${BASE}assets/kebab_chef.png` },
+  { id: 6, category: 'Main dishes', name: 'Tajine d\'Agneau Royal', price: 38, description: 'Mijoté d\'agneau aux pruneaux, amandes grillées et miel.', image: `${BASE}assets/tajine_agneau_royal.png` },
+  { id: 3, category: 'Sandwiches', name: 'Bucket Coa Royal', price: 20, description: 'Bucket de poulet frit secret \'Coa Royal\', croustillant et doré, servi avec frites maison.', image: `${BASE}assets/poulet_coa_royal.jpg` },
+  { id: 4, category: 'Desserts', name: 'Dôme Chocolat & Cardamome', price: 14, description: 'Mousse chocolat noir, infusion cardamome, feuille d\'or.', image: `${BASE}assets/dome_chocolat.png` },
 
   { id: 17, category: 'Drinks', name: 'Citronnade Fraîche (1L)', price: 12, description: 'Citronnade maison aux citrons frais, servie en bouteille de 1 litre avec notre étiquette signature.', image: `${BASE}assets/citronnade.jpg` },
 ]
